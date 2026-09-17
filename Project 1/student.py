@@ -12,13 +12,13 @@ class Student:
     # helpers (none for this class)
 
     # getters
-    def getName(self):
+    def getName(self)->str:
         return self._name
 
-    def getAge(self):
+    def getAge(self)->int:
         return self._age
 
-    def getGPA(self):
+    def getGPA(self)->float:
         return self._gpa
     
     # setters

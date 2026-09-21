@@ -5,9 +5,9 @@ class Student:
     _gpa:float = -1
 
     def __init__(self, name:str = "NULL", age:int = -1, gpa:float = -1):
-        self.setName = name
-        self.setAge  = age
-        self.setGPA = gpa
+        self.setName(name)
+        self.setAge(age)
+        self.setGPA(gpa)
 
     # helpers (none for this class)
 
@@ -33,4 +33,4 @@ class Student:
 
     # if class is printed print all stored variables
     def __str__(self):
-        pass
+        return f"\tStudent:\n\t\tName: {self.getName()}\n\t\tAge: {self.getAge()}\n\t\tGPA: {self.getGPA()}"

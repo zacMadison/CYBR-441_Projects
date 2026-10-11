@@ -31,6 +31,10 @@ class Node:
     def getId(self):
         return self.id
 
+    def getIsGoal(self):
+        if self.getTrash() == [0,0]:
+            return True
+        
     def getConnections(self):
         return self.connections
     

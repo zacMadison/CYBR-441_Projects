@@ -108,7 +108,7 @@ class GraphInterface:
             ######
             #NOTE: This is where it is going to call your function
             ######
-            self.__path = self.__graph.dfs(startId) # type: ignore
+            self.__path = self.__graph.dfs(startId)[0] # type: ignore
             self.__currentStep = 0
             print(f"Path for DFS: {self.__path}")
             if len(self.__path) == 0:
@@ -131,9 +131,8 @@ class GraphInterface:
         if len(self.__path) == 0:
             return
 
-        nodeId = self.__path[self.__currentStep]
-
-        node = self.__graph.getNode(nodeId) # type: ignore
+        nodeId = self.__path[self.__currentStep] 
+        node = self.__graph.getNodes()[nodeId-1] 
 
         imagePath = node.getImg()
 

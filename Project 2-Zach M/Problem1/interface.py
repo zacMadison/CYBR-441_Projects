@@ -84,7 +84,7 @@ class GraphInterface:
             ######
             self.__path = self.__graph.bfs(startId) # type: ignore
             self.__currentStep = 0
-            print(f"Path for BFS: {self.__path}")           # WHAT FORMAT ????????????????
+            print(f"Path for BFS: {self.__path}")
             if len(self.__path) == 0:
                 messagebox.showinfo(
                     "No Solution",
